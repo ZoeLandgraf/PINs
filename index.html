@@ -1,0 +1,257 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="PINs">
+    <meta name="author" content="Zoe Landgraf">
+
+    <title>Progressive Implicit Networks for Multi-Scale Neural Representations</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+<div class="jumbotron jumbotron-fluid" style="background-color:#e0ebeb">
+    <div class="container"></div>
+    <h2>PINs <br> </h2>
+    <h3>Progressive Implicit Networks for Multi-Scale Neural Representations</h3>
+<!--            <p class="abstract">An interpretable, data-efficient, and scalable neural scene representation.</p>-->
+    <hr>
+    <p class="authors">
+        <a> Zoe Landgraf, Alexander Sorkine-Hornung, Ricardo Silveira-Cabral</a>
+    </p>
+    <div class="btn-group" role="group" aria-label="Top menu">
+        <a class="btn btn-primary" href="https://arxiv.org/abs/2202.04713">Paper</a>
+<!--        <a class="btn btn-primary" href="https://youtu.be/6IruTME-EXM>Video">Video</a>-->
+    </div>
+</div>
+
+<div class="container">
+<!--    <div class="section">-->
+<!--       <div class="row align-items-center">-->
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <video width="90%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/project_page_teaser_video.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <hr>-->
+<!--        <p>-->
+<!--             By estimating 3D shape and instances from a single view, we can capture information about an environment-->
+<!--            quickly, without the need for comprehensive scanning and multi-view fusion. Solving this task for composite-->
+<!--            scenes (such as object stacks) is challenging: occluded areas are not only ambiguous in shape but also in-->
+<!--            instance segmentation; multiple decompositions could be valid. We observe that physics constrains-->
+<!--            decomposition as well as shape in occluded regions and hypothesise that a latent space learned from scenes-->
+<!--            built under physics simulation can serve as a prior to better predict shape and instances in occluded-->
+<!--            regions. To this end we propose SIMstack, a depth-conditioned Variational Auto-Encoder (VAE), trained on-->
+<!--            a dataset of objects stacked under physics simulation. We formulate instance segmentation as a centre-->
+<!--            voting task which allows for class-agnostic detection and doesn't require setting the maximum number of-->
+<!--            objects in the scene. At test time, our model can generate 3D shape and instance segmentation from a single-->
+<!--            depth view, probabilistically sampling proposals for the occluded region from the learned latent space.-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--     <div class="section">-->
+<!--        <h2>Towards fast object-level scene understanding with approximate reasoning for occluded regions</h2>-->
+<!--           <hr>-->
+<!--        <p>-->
+
+<!--&lt;!&ndash;            The classical approach to generate 3D shapes from depth images involves taking images from all sides of an&ndash;&gt;-->
+<!--&lt;!&ndash;            object and fusing the re-projected points into a common 3D representation such as&ndash;&gt;-->
+<!--&lt;!&ndash;            a truncated signed distance function (TSDF). This requires comprehensive scanning and still won't guarantee&ndash;&gt;-->
+<!--&lt;!&ndash;            that all required viewpoints to generate a watertight surface reconstruction can be reached. 3D shape reconstruction&ndash;&gt;-->
+<!--&lt;!&ndash;            becomes particularly challenging for composite scenes in which objects occlude each other.&ndash;&gt;-->
+<!--&lt;!&ndash;            <br>&ndash;&gt;-->
+<!--            Shape reconstruction is important for scene understanding, estimating free space and can be useful for tracking,-->
+<!--            but in order to allow for interactive tasks such as object manipulation, an object-level understanding of-->
+<!--            the scene is crucial; this requires instance segmentation. <i><b>With SIMstack we propose the first approach to-->
+<!--            provide both 3D shape and instance decomposition for multiple (convex) stacked objects from a-->
+<!--            single depth view. </b></i> By providing class-agnostic-->
+<!--            instance segmentation and training on scenes composed of primitive shapes (SuperQuadrics),-->
+<!--            our approach is designed to work for unknown objects.-->
+<!--            <br><br>-->
+<!--            Our model reconstructs and segments the visible regions with high fidelity while generating shape and instance-->
+<!--            proposals for occluded regions, conditioned on the visible information obtained from depth.-->
+<!--            This allows for fast reconstruction and decomposition in the visible area and fast approximate object-level-->
+<!--            reasoning for occluded areas.-->
+
+<!--            <br><br>-->
+<!--            SIMstack provides fast 3D shape and instance decomposition into convex primitives,-->
+<!--            which could be used for downstream applications (e.g to initialise a multi-view scanning system-->
+<!--            to capture more detail) and allows for fast multi-object reasoning,-->
+<!--            useful for interactive tasks such as the precise (non-disruptive) grasping we demonstrate.-->
+<!--            Our method can leverage multi-view information for improved reconstruction which makes it by design a-->
+<!--            candidate for incremental reconstruction systems.-->
+
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    <div class="section">-->
+<!--        <h2>Method</h2>-->
+<!--         <hr>-->
+<!--        <p>-->
+<!--           We learn a joint lower dimensional instance and shape encoding by training on a dataset of object stacks,-->
+<!--            generated under physics simulation. At test time, this learnt latent space is used within our depth-conditioned-->
+<!--            VAE to generate shape and instance decomposition in occluded regions. The extracted depth feature maps-->
+<!--            are used to generate accurate 3D shape for the visible region, while conditioning the generated 3D shape-->
+<!--            and instance decomposition of the entire stack.-->
+<!--        </p>-->
+
+<!--         <div class="row align-items-center">-->
+
+<!--             <img src="img/train_time_schematic.png" style="width:100%">-->
+<!--         </div>-->
+
+<!--        At test time, SIMstack generates 3D shape and instance segmentation from a single depth image. The raw network-->
+<!--        output is processed using a 3D Hough Voting algorithm and a Superquadric shape fitting module.-->
+
+<!--         <div class="row align-items-center">-->
+
+<!--             <img src="img/test_time_schematic.png" style="width:100%">-->
+<!--         </div>-->
+
+
+<!--        Sampling from the VAE's latent space generates a variety of 3D shape and instance decomposition proposals-->
+<!--        in the scene's occluded region, while keeping the 3D shape in the visible region constant.-->
+
+<!--        <div class="row align-items-center">-->
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <video width="90%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/sampling_from_latent_space_example_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--    <div class="section">-->
+<!--        <h2>Results</h2>-->
+<!--        <hr>-->
+<!--        <p>We test SIMstack on scenes with up to 7 objects. Although our method is only trained on scenes with-->
+<!--        3 to 4 objects, it generalises to more cluttered scenes.</p>-->
+
+
+<!--        <div class="row align-items-center">-->
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <img src="img/synthetic_multi_object_examples.png" style="width:100%">-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <hr>-->
+<!--        <p>Our method can hypothetise fully occluded objects when generating 3D shape and instance segmentation.-->
+<!--            Sampling from the latent space produces different proposals of hidden objects</p>-->
+
+<!--        <div class="row align-items-center">-->
+
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/predicting_fully_occluded_object_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--            <div class="col justify-content-center text-center">-->
+<!--                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/circle_synthetic_scene_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <hr>-->
+<!--        <p> We test our method on a number of real world scenes of stacked objects. Our experiments show that SIMstack-->
+<!--            generalises well to real world data-->
+<!--        </p>-->
+
+<!--        <div class="row align-items-center">-->
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <img src="img/real_examples_image.png" style="width:70%">-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--         <div class="row align-items-center">-->
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/circle_real_scene.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <hr>-->
+
+<!--    </div>-->
+
+<!--    <div class="section">-->
+<!--        <h2>Grasping Application</h2>-->
+<!--            <hr>-->
+<!--        <p>We demonstrate an application of SIMstack for an interactive task: non-disruptive and precise grasping.-->
+<!--            Given a real scene of a few-->
+<!--        stacked objects, we load the output of SIMstack into CoppeliaSIM and find the least disruptive grasp to remove-->
+<!--        a supporting target object. This demo shows the improtance of object-level scene understanding for interactive-->
+<!--            tasks.</p>-->
+
+<!--         <div class="row align-items-center">-->
+
+<!--           <div class="col justify-content-center text-center">-->
+<!--                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/grasping_demo_video_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+<!--             <div class="col justify-content-center text-center">-->
+<!--                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/grasping_demo_video_2_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        </div>-->
+
+<!--    <div class="section">-->
+<!--        <h2>Stability evaluation</h2>-->
+<!--        <p> We evaluate the validity of SIMstack's instance decomposition under physics simulation. The more stable-->
+<!--            the stack, the better (more realistic) the decomposition. </p>-->
+<!--            <div class="row align-items-center">-->
+<!--                <div class="col justify-content-center text-center">-->
+<!--                <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                    <source src="img/pybullet_sim_cropped.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </div>-->
+
+<!--            </div>-->
+
+
+    <div class="section">
+        <h2>Bibtex</h2>
+        <hr>
+        <div class="bibtexsection">
+            @inproceedings{landgraf2022PINs,
+                author = {Landgraf, Zoe
+                          and Sorkine-Horning Alexander
+                          and Silveira-Cabral Ricardo
+                          },
+                title = {PINs: Progressive Implicit Networks for Multi-Scale Neural Representations},
+                booktitle = {ICML},
+                year={2022}
+            }
+        </div>
+    </div>
+
+    <hr>
+
+<!--    <footer>-->
+<!--        <p>Send feedback and questions to <a href="http://web.stanford.edu/~sitzmann/">Zoe Landgraf</a></p>-->
+<!--    </footer>-->
+
+
+</div>
+
+    </body>
+</html>

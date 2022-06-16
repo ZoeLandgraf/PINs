@@ -1,0 +1,141 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden;  /*Prevent scroll on narrow devices */
+  padding-top: 30px;
+    text-align: justify;
+}
+footer {
+  padding: 10px 0;
+}
+.authors {
+  font-size: 20px;
+}
+/*.container {
+  max-width: 768px;
+}*/
+.container {
+  max-width: 1000px;
+}
+p {
+  font-size: 16px;
+  /*padding-bottom: 20px;*/
+}
+
+li {
+  font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    align: center;
+}
+
+h10 {
+    text-align: center;
+    align: center;
+
+}
+
+.jumbotron{
+    text-align: center;
+}
+
+/*
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #009999;
+    border-color: #009999;
+}
+.btn {
+    font-size: 18px;
+    background-color: #009999 !important;
+}*/
+
+.btn-group{
+    font-size: 18px;
+    background-color: #009999 !important;
+}
+
+.btn-group:hover,
+.btn-group:active
+{
+    font-size: 18px;
+    background-color: #00cccc !important;
+}
+
+.btn-disabled {
+    /*background-color: #009999;*/
+}
+
+.jumbotron h2 {
+  font-size: 36px;
+}
+
+.jumbotron h10 {
+  font-size: 16px;
+}
+
+.section {
+  padding-top: 30px;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vcontainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gif {
+    padding:10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.caption {
+  width:75%;
+  font-size:14px
+}
+
+.bibtexsection {
+  font-family: "Courier",monospace;
+  font-size:10px;
+  white-space:pre;
+  background-color: #f4f4f4;
+  text-align:left;
+}
+
+.canvas-row canvas {
+  max-width:100%;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+.vspace-top {
+    margin-top: 30px;
+}
