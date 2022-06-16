@@ -44,19 +44,19 @@ h10 {
     text-align: center;
 }
 
-/*
+
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited,
 .btn-primary:focus {
-    background-color: #009999;
-    border-color: #009999;
+    background-color: #cc6600;
+    border-color: #cc6600;
 }
 .btn {
     font-size: 18px;
-    background-color: #009999 !important;
-}*/
+    background-color: #cc6600 !important;
+}
 
 .btn-group{
     font-size: 18px;
