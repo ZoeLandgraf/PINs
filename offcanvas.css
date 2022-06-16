@@ -67,11 +67,11 @@ h10 {
 .btn-group:active
 {
     font-size: 18px;
-    background-color: #00cccc !important;
+    background-color: #cc6600 !important;
 }
 
 .btn-disabled {
-    background-color: #00cccc;
+    background-color: #cc6600;
 }
 
 .jumbotron h2 {
