@@ -43,21 +43,21 @@
 <!--            </div>-->
 
 <!--        </div>-->
-<!--        <hr>-->
-<!--        <p>-->
-<!--             By estimating 3D shape and instances from a single view, we can capture information about an environment-->
-<!--            quickly, without the need for comprehensive scanning and multi-view fusion. Solving this task for composite-->
-<!--            scenes (such as object stacks) is challenging: occluded areas are not only ambiguous in shape but also in-->
-<!--            instance segmentation; multiple decompositions could be valid. We observe that physics constrains-->
-<!--            decomposition as well as shape in occluded regions and hypothesise that a latent space learned from scenes-->
-<!--            built under physics simulation can serve as a prior to better predict shape and instances in occluded-->
-<!--            regions. To this end we propose SIMstack, a depth-conditioned Variational Auto-Encoder (VAE), trained on-->
-<!--            a dataset of objects stacked under physics simulation. We formulate instance segmentation as a centre-->
-<!--            voting task which allows for class-agnostic detection and doesn't require setting the maximum number of-->
-<!--            objects in the scene. At test time, our model can generate 3D shape and instance segmentation from a single-->
-<!--            depth view, probabilistically sampling proposals for the occluded region from the learned latent space.-->
-<!--        </p>-->
-<!--    </div>-->
+        <hr>
+        <p>
+            Multi-layer perceptrons (MLP) have proven to be effective scene encoders when combined with higher-dimensional
+                  projections of the input, commonly referred to as <i>positional encoding</i>.
+                   However, scenes with a wide frequency spectrum remain a challenge: choosing high frequencies
+                   for positional encoding introduces noise in low structure areas, while low frequencies result
+                    in poor fitting of detailed regions. To address this, we propose a progressive positional
+                     encoding, exposing a hierarchical MLP structure to incremental sets of frequency encodings.
+                in a way that resembles the hierarchy of Fourier Transforms.
+                Our model accurately reconstructs scenes with wide frequency bands and learns a scene representation at progressive level
+            of detail <i>without explicit per-level supervision</i>. The architecture is modular: each level
+            encodes a continuous implicit representation that can be leveraged separately for its respective resolution, meaning a smaller network for coarser reconstructions.
+        Experiments on several 2D and 3D datasets show improvements in reconstruction accuracy, representational capacity and training speed compared to baselines.
+        </p>
+    </div>
 
 <!--     <div class="section">-->
 <!--        <h2>Towards fast object-level scene understanding with approximate reasoning for occluded regions</h2>-->
