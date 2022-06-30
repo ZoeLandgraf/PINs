@@ -51,7 +51,6 @@
             for positional encoding introduces noise in low structure areas, while low frequencies result
             in poor fitting of detailed regions. To address this, we propose a progressive positional
             encoding, exposing a hierarchical MLP structure to incremental sets of frequency encodings.
-            in a way that resembles the hierarchy of Fourier Transforms.
             Our model accurately reconstructs scenes with wide frequency bands and learns a scene representation at progressive level
             of detail <i>without explicit per-level supervision</i>. The architecture is modular: each level
             encodes a continuous implicit representation that can be leveraged separately for its respective resolution,
@@ -98,21 +97,29 @@
 <!--        </p>-->
 <!--    </div>-->
 
-<!--    <div class="section">-->
-<!--        <h2>Method</h2>-->
-<!--         <hr>-->
-<!--        <p>-->
-<!--           We learn a joint lower dimensional instance and shape encoding by training on a dataset of object stacks,-->
-<!--            generated under physics simulation. At test time, this learnt latent space is used within our depth-conditioned-->
-<!--            VAE to generate shape and instance decomposition in occluded regions. The extracted depth feature maps-->
-<!--            are used to generate accurate 3D shape for the visible region, while conditioning the generated 3D shape-->
-<!--            and instance decomposition of the entire stack.-->
-<!--        </p>-->
+    <div class="section">
+        <h2>Method</h2>
+         <hr>
+        <p>
+              We formulate the task of reconstructing a scene <i>S</i> as a composition of a
+              base component <i>c</i> and a set of residuals <i>R</i>. Each residual is parameterised by an MLP and the final
+              reconstruction is produced by a simple addition of all residuals and <i>c</i>.
+              Intermediate levels of detail
+              can be obtained by combining a subset of the residuals (e.g. to obtain the first level of detail, the first
+              residual is added to the base component <i>c</i>).
 
-<!--         <div class="row align-items-center">-->
+            <br><br>
+            Our architecture is composed of multiple stacked small MLPs <i>M</i>,
+            whereby each MLP receives as input a set of Fourier Feature mappings <i>f</i>
+            and the output of the previous level (level-conditioning).
+            The first level receives as input the raw coordinates <b>x</b>.
 
-<!--             <img src="img/train_time_schematic.png" style="width:100%">-->
-<!--         </div>-->
+        </p>
+
+         <div class="row align-items-center">
+
+             <img src="data/Architecture_PINs.png" style="width:100%">
+         </div>
 
 <!--        At test time, SIMstack generates 3D shape and instance segmentation from a single depth image. The raw network-->
 <!--        output is processed using a 3D Hough Voting algorithm and a Superquadric shape fitting module.-->
