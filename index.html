@@ -108,9 +108,14 @@
               can be obtained by combining a subset of the residuals (e.g. to obtain the first level of detail <i>S<sub>1</sub></i>, the first
               residual is added to the base component <i>c</i>).
 
+             <br><br>
+            <b>Progressive Fourier Feature encoding</b> As positional encoding, we use a Fourier Feature mapping
+            (see <a href="https://arxiv.org/abs/2006.10739">Fourier Feature Networks</a>) and sort the encoding frequencies
+            in ascending order.
+
             <br><br>
-            Our architecture is composed of multiple stacked small MLPs <i>M</i>,
-            each receiving as input a set of Fourier Feature mappings <i>f<sub>1 ... N</sub></i>
+            <b>Network architecture</b> Our model is composed of multiple stacked small MLPs <i>M</i>,
+            each receiving as input a subset of our progressive Fourier Feature encoding <i>f<sub>1 ... N</sub></i>
             and the output of the previous level. The first level receives as input the raw coordinates <b>x</b>.
 
         </p>
