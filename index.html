@@ -102,15 +102,15 @@
          <hr>
         <p>
               We formulate the task of reconstructing a scene <i>S</i> as a composition of a
-              base component <i>c</i> and a set of residuals <i>R</i>. Each residual is parameterised by an MLP and the final
+              base component <i>c</i> and a set of residuals <i>R<sub>1 ... N</sub></i>. Each residual is parameterised by an MLP and the final
               reconstruction is produced by a simple addition of all residuals and <i>c</i>.
               Intermediate levels of detail
-              can be obtained by combining a subset of the residuals (e.g. to obtain the first level of detail, the first
+              can be obtained by combining a subset of the residuals (e.g. to obtain the first level of detail <i>S<sub>1</sub></i>, the first
               residual is added to the base component <i>c</i>).
 
             <br><br>
             Our architecture is composed of multiple stacked small MLPs <i>M</i>,
-            each receiving as input a set of Fourier Feature mappings <i>f</i>
+            each receiving as input a set of Fourier Feature mappings <i>f<sub>1 ... N</sub></i>
             and the output of the previous level. The first level receives as input the raw coordinates <b>x</b>.
 
         </p>
@@ -180,7 +180,8 @@
 
 <!--        </div>-->
         <hr>
-        <p> When presented with <b>limited number of training samples</b>, PINs can recover the scene more accurately:
+        <p> When presented with <b>limited number of training samples</b>, PINs can recover the scene more accurately
+            compared to our baselines:
         </p>
 
         <div class="row align-items-center">
