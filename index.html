@@ -26,6 +26,8 @@
     <hr>
     <p class="authors">
         <a> Zoe Landgraf, Alexander Sorkine-Hornung, Ricardo Silveira-Cabral</a>
+        <br>
+        Imperial College London, Meta
     </p>
     <div class="btn-group" role="group" aria-label="Top menu">
         <a class="btn btn-primary" href="https://arxiv.org/abs/2202.04713">Paper</a>
@@ -61,41 +63,6 @@
 
     </div>
 
-
-<!--     <div class="section">-->
-<!--        <h2>Towards fast object-level scene understanding with approximate reasoning for occluded regions</h2>-->
-<!--           <hr>-->
-<!--        <p>-->
-
-<!--&lt;!&ndash;            The classical approach to generate 3D shapes from depth images involves taking images from all sides of an&ndash;&gt;-->
-<!--&lt;!&ndash;            object and fusing the re-projected points into a common 3D representation such as&ndash;&gt;-->
-<!--&lt;!&ndash;            a truncated signed distance function (TSDF). This requires comprehensive scanning and still won't guarantee&ndash;&gt;-->
-<!--&lt;!&ndash;            that all required viewpoints to generate a watertight surface reconstruction can be reached. 3D shape reconstruction&ndash;&gt;-->
-<!--&lt;!&ndash;            becomes particularly challenging for composite scenes in which objects occlude each other.&ndash;&gt;-->
-<!--&lt;!&ndash;            <br>&ndash;&gt;-->
-<!--            Shape reconstruction is important for scene understanding, estimating free space and can be useful for tracking,-->
-<!--            but in order to allow for interactive tasks such as object manipulation, an object-level understanding of-->
-<!--            the scene is crucial; this requires instance segmentation. <i><b>With SIMstack we propose the first approach to-->
-<!--            provide both 3D shape and instance decomposition for multiple (convex) stacked objects from a-->
-<!--            single depth view. </b></i> By providing class-agnostic-->
-<!--            instance segmentation and training on scenes composed of primitive shapes (SuperQuadrics),-->
-<!--            our approach is designed to work for unknown objects.-->
-<!--            <br><br>-->
-<!--            Our model reconstructs and segments the visible regions with high fidelity while generating shape and instance-->
-<!--            proposals for occluded regions, conditioned on the visible information obtained from depth.-->
-<!--            This allows for fast reconstruction and decomposition in the visible area and fast approximate object-level-->
-<!--            reasoning for occluded areas.-->
-
-<!--            <br><br>-->
-<!--            SIMstack provides fast 3D shape and instance decomposition into convex primitives,-->
-<!--            which could be used for downstream applications (e.g to initialise a multi-view scanning system-->
-<!--            to capture more detail) and allows for fast multi-object reasoning,-->
-<!--            useful for interactive tasks such as the precise (non-disruptive) grasping we demonstrate.-->
-<!--            Our method can leverage multi-view information for improved reconstruction which makes it by design a-->
-<!--            candidate for incremental reconstruction systems.-->
-
-<!--        </p>-->
-<!--    </div>-->
 
     <div class="section">
         <h2>Method</h2>
@@ -168,7 +135,7 @@
         </div>
         <hr>
         <p> <b>3D regression</b> Our method can also reconstruct 3D scenes at progressive level of detail at a higher degree of accuracy
-            compared to our baselines</p>
+            compared to our baselines: </p>
 
         <div class="row align-items-center">
            <div class="col justify-content-center text-center">
